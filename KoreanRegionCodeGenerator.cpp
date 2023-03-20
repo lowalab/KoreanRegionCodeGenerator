@@ -13,19 +13,8 @@ vector<string> split(string str, char Delimiter) {
 	return result;
 }
 
-std::string getKoreanDiscardString() // 폐지 문자열을 UTF-8형식으로 저장한 파일
-{
-	std::ifstream discardFile("discard.txt");
-	char str[100];
-	discardFile.getline(str, sizeof(str));
-	std::string strDiscard = str;
-	discardFile.close();
-	return strDiscard;
-}
-
 int main()
 {
-	std::string strDiscard = getKoreanDiscardString();
 	std::ifstream file("법정동코드 전체자료.txt");
 	std::locale::global(std::locale("ko_KR.UTF-8")); // UTF-8 CONSOLE
 	if (file.is_open()) {
@@ -33,7 +22,7 @@ int main()
 		char str[100];
 		while (file.getline(str, sizeof(str))) {
 			std::string line = str;
-			if (line.find(strDiscard) != string::npos) continue;;
+			if (line.find("\xED\x8F\x90\xEC\xA7\x80") != string::npos) continue; // 폐지 코드 제거
 			line.replace(line.find("\t"), 1, " ");
 			line.replace(line.find("\t"), 1, " ");
 			vector<string> strs = split(line, ' ');
