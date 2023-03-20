@@ -1,6 +1,5 @@
-**한국의 법정동 코드 리스트를 시군구 단위까지만 정리**
-![법정동 코드 목록 조회](https://www.code.go.kr/image/common/ci.png)
-
+** 한국 지역 코드 변환기 **
+**![법정동 코드 목록 조회](https://www.code.go.kr/image/common/ci.png) 에서 법정동 리스트를 가져와서 시군구 단위(4자리)까지 정리**
 
 원본 데이터
 *https://www.code.go.kr/stdcode/regCodeL.do*
