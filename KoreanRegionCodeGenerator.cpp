@@ -18,7 +18,6 @@ int main()
 			while ((pos = line.find("\t")) != std::string::npos) line.replace(pos, 1, " ");
 			istringstream iss(line); // 공백을 기준으로 문자열 배열로
 			vector<string> strs;
-			//string result;
 			while (getline(iss, line, ' ')) strs.push_back(line);
 			try {
 				int num = std::stoi(strs[0].substr(0, 4));
@@ -29,7 +28,7 @@ int main()
 			}
 		}
 		file.close();
-		for (auto iter : maps) cout << iter.first << "," << iter.second << endl;
+		for (auto& iter : maps) cout << iter.first << "," << iter.second << endl;
 	}
 	return 0;
 }
