@@ -8,7 +8,9 @@ using namespace std;
 int main()
 {
 	std::ifstream file("법정동코드 전체자료.txt");
+#ifdef WINVER 
 	std::locale::global(std::locale("ko_KR.UTF-8")); // UTF-8 CONSOLE
+#endif
 	if (file.is_open()) {
 		map<int, string> maps;
 		std::string line;
