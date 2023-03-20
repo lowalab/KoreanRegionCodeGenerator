@@ -1,4 +1,4 @@
-**![행정표준관리시스템](/assets/images/ci.png) 에서 법정동 리스트를 가져와서 시군구 단위(4자리)까지 정리**
+**![행정표준관리시스템](ci.png) 에서 법정동 리스트를 가져와서 시군구 단위(4자리)까지 정리**
 
 원본 데이터
 *https://www.code.go.kr/stdcode/regCodeL.do*
