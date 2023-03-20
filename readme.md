@@ -2,7 +2,7 @@
 
 원본 데이터
 *https://www.code.go.kr/stdcode/regCodeL.do*
-![법정동 코드 목록 조회][https://www.code.go.kr/image/common/ci.png]
+![법정동 코드 목록 조회](https://www.code.go.kr/image/common/ci.png)
 > 법정동 코드 전체 자료.zip
 
 압축해제하면 법정동코드 전체자료.txt
