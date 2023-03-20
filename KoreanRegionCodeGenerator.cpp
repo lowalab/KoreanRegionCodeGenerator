@@ -15,7 +15,11 @@ int main()
 		map<int, string> maps;
 		std::string line;
 		while (getline(file, line)) {
+#ifdef WINVER 			
 			if (line.find("\xED\x8F\x90\xEC\xA7\x80") != string::npos) continue; // 폐지 코드 제거
+#else
+			if (line.find("폐지") != string::npos) continue; // 폐지 코드 제거
+#endif
 			size_t pos; // 모든 탭을 공백으로
 			while ((pos = line.find("\t")) != std::string::npos) line.replace(pos, 1, " ");
 			istringstream iss(line); // 공백을 기준으로 문자열 배열로
